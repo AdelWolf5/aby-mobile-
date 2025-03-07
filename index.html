@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laby - Jeu de Labyrinthe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Laby</h1>
+        </header>
+
+        <section id="game-modes">
+            <h2>Modes de Jeu</h2>
+            <button id="levels-mode-btn">Niveaux</button>
+            <button id="arena-mode-btn">Arène</button>
+            <button id="infinite-mode-btn">Infini</button>
+            <button id="multiplayer-mode-btn">Multijoueur (Bientôt)</button>
+        </section>
+
+        <section id="game-container" class="hidden">
+            <div id="game-ui">
+                <div id="score-display">Score: <span id="score-value">0</span></div>
+                <div id="level-display">Niveau: <span id="level-value">1</span></div>
+            </div>
+            <canvas id="game-canvas" width="400" height="400"></canvas>
+        </section>
+
+        <section id="settings" class="hidden">
+            <h2>Paramètres</h2>
+            <div class="setting-option">
+                <label for="difficulty">Difficulté:</label>
+                <select id="difficulty">
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyen</option>
+                    <option value="hard">Difficile</option>
+                </select>
+            </div>
+            <div class="setting-option">
+                <label for="appearance">Apparence:</label>
+                <select id="appearance">
+                    <option value="default">Défaut</option>
+                    <option value="dark">Sombre</option>
+                    </select>
+            </div>
+            <div class="setting-option">
+                <label for="origin">Origine:</label>
+                <select id="origin">
+                    <!-- We'll populate countries later with JavaScript -->
+                    <option value="">Choisir...</option>
+                </select>
+            </div>
+            <button id="back-to-modes-btn">Retour aux Modes de Jeu</button>
+        </section>
+
+
+        <footer>
+            <p>© 2024 Laby - Créé avec ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
